@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <p>Agregar un nuevo cliente!</p>
+  <div class=""row>
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+        <label class="form-label">Cliente</label>
+        <input [(ngModel)]="cliente.user" type="text" class="form-control" name="user" >
+        </div>
+        <div class="mb-3">
+        <label class="form-label">Telefono</label>
+        <input [(ngModel)]="cliente.phone" type="text" class="form-control" name="phone" >
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Arreglo</label>
+        <input [(ngModel)]="cliente.description" type="text" class="form-control" name="description" >
+      </div>
+      </form>
+      <button (click)="agregar()" class="btn btn-primary">Añadir como nuevo cliente</button>
+      <li> </li>
+      <button routerLink="/inicio">Volver</button>
+    </div>
+
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+
+</div>
