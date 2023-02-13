@@ -1,8 +1,30 @@
-<div>
-  <h1 class="text-center">Innpactia app</h1>
-  <div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- <ul class="navbar-nav">
 
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="publico">public</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="privado">private</a>
+      </li>
+    </ul> -->
   </div>
-</div>
+  <button class="btn btn-primary"
+  (click)="loginWithRedirect()"
+  *ngIf="!(auth.isAuthenticated$ | async)">Ingresar</button>
+  <button class="btn btn-danger"
+  (click)="logOut()"
+  *ngIf="(auth.isAuthenticated$ | async)">Salir</button>
+</nav>
+<div class="container mt-5">
 
+  <!-- <h1 class="btn btn-primary"
+  *ngIf="!(auth.isAuthenticated$ | async)">Debes iniciar sesión para poder utilizar la app</h1> -->
+
+</div>
 <router-outlet></router-outlet>
